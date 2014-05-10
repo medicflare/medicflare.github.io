@@ -11,7 +11,10 @@ angular
     $routeProvider
       .when '/',
         templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
+        controller:  'MainCtrl'
+      .when '/clinics',
+        templateUrl: 'views/clinics/index.html'
+        controller:  'ClinicCtrl'
       .otherwise
         redirectTo: '/'
 
