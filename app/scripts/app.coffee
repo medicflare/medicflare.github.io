@@ -12,17 +12,22 @@ angular
       .when '/',
         templateUrl: 'views/main.html'
         controller:  'MainCtrl'
+
+      # Clinics
       .when '/clinics',
         templateUrl: 'views/clinics/index.html'
         controller:  'ClinicIndexCtrl'
       .when '/clinics/:clinicId',
         templateUrl: 'views/clinics/show.html'
         controller:  'ShowClinicCtrl'
+
+      # Receptionists
       .when '/receptionists/sign_in',
         templateUrl: 'views/receptionists/sign_in.html'
         controller: 'ReceptionistsCtrl'
       .when '/receptionists/new',
         templateUrl: 'views/receptionists/new.html'
         controller: 'ReceptionistsCtrl'
+
       .otherwise
         redirectTo: '/'
