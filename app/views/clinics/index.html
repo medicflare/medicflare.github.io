@@ -1,0 +1,8 @@
+<h1> Choose a Clinic </h1>
+
+<ul id="clinics-list">
+  <li ng-repeat="clinic in clinics">
+  	<h3><a href="#/clinics/{{clinic.id}}">{{ clinic.name }}</a></h3>
+  	<small>{{ clinic.location }}</small>
+  </li>
+</ul>
