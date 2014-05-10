@@ -24,7 +24,7 @@
 
     <!-- Add your site or application content here -->
     <div ng-include="'views/header.html'"></div>
-    <div class="container" ng-view></div>
+    <div class="container" ng-controller='MainCtrl' ng-view></div>
     <div ng-include="'views/footer.html'"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -71,6 +71,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/clinic.js"></script>
         <script src="scripts/services/clinicservice.js"></script>
+        <script src="scripts/services/auth_service.js"></script>
         <script src="scripts/controllers/receptionists.js"></script>
         <!-- endbuild -->
 </body>

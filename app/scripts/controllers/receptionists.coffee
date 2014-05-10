@@ -1,7 +1,10 @@
 'use strict'
 
 angular.module('medicalAppApp')
-  .controller 'ReceptionistsCtrl', ($scope) ->
+  .controller 'ReceptionistsCtrl', ($scope, AuthService, ClinicService) ->
+
+    ClinicService.get (data) ->
+      $scope.clinics = data.clinics
 
     $scope.test_users = [
       {
@@ -14,14 +17,15 @@ angular.module('medicalAppApp')
     $scope.user = {email: '', password: '', phoneNumber: '', clinic_id: null}
     $scope.error = ''
 
-    # Will create new session with API and store auth_token
     $scope.login = ->
       $scope.error = ''
-      for test_user in $scope.test_users
-        if $scope.user.email == test_user.email and $scope.user.password == test_user.password
-          alert 'Successfully logged in!'
-          return
-      $scope.error = 'Invalid login'
+      AuthService.login($scope.user).then ( ->
+          console.log 'Successful login'
+          #redirect
+        ),
+        ( ->
+          $scope.error = 'Invalid email or password. Please try again'
+        )
 
     # Will POST to API to create new receptionist
     $scope.createReceptionist = ->
