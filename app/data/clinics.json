@@ -1,0 +1,14 @@
+{
+    "clinics": [
+        {
+            "id": 0,
+            "name": "Clinic A",
+            "location": "Waterloo, ON"
+        },
+        {
+            "id": 1,
+            "name": "Clinic B",
+            "location": "Kitchener, ON"
+        }
+    ]
+}

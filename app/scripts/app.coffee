@@ -14,7 +14,10 @@ angular
         controller:  'MainCtrl'
       .when '/clinics',
         templateUrl: 'views/clinics/index.html'
-        controller:  'ClinicCtrl'
+        controller:  'ClinicIndexCtrl'
+      .when '/clinics/:clinicId',
+        templateUrl: 'views/clinics/show.html'
+        controller:  'ShowClinicCtrl'
       .otherwise
         redirectTo: '/'
 
