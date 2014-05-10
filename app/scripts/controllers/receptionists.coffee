@@ -6,14 +6,6 @@ angular.module('medicalAppApp')
     ClinicService.get (data) ->
       $scope.clinics = data.clinics
 
-    $scope.test_users = [
-      {
-        id: 1
-        email: 'test@test.com'
-        password: 'test1234'
-      }
-    ]
-
     $scope.user = {email: '', password: '', phoneNumber: '', clinic_id: null}
     $scope.error = ''
 
