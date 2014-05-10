@@ -22,6 +22,9 @@ angular
         controller:  'ShowClinicCtrl'
 
       # Receptionists
+      .when '/clinics/:clinicId/sign_up',
+        templateUrl: 'views/queues/sign_up.html'
+        controller:  'QueuesCtrl'
       .when '/receptionists/sign_in',
         templateUrl: 'views/receptionists/sign_in.html'
         controller: 'ReceptionistsCtrl'
