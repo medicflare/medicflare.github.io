@@ -9,7 +9,4 @@ angular.module('medicalAppApp')
     ClinicService.get (data) ->
       $scope.clinic = data.clinics[$routeParams.clinicId]
 
-
-
-
-
+    $scope.message = 'Your confirmation was successful. You will be added to the queue shortly' if $routeParams.success
