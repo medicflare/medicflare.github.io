@@ -3,12 +3,28 @@
         {
             "id": 0,
             "name": "Clinic A",
-            "location": "Waterloo, ON"
+            "location": "Waterloo, ON",
+            "lineup": {
+                "patients" : [
+                                { "name": "John Doe" },
+                                { "name": "James Smith" },
+                                { "name": "Bilbo" }
+                             ]
+            }
         },
         {
             "id": 1,
             "name": "Clinic B",
-            "location": "Kitchener, ON"
+            "location": "Kitchener, ON",
+            "lineup": {
+                "patients" : [
+                    { "name": "John Doe" },
+                    { "name": "James Smith" },
+                    { "name": "Bilbo" },
+                    { "name": "Bieber" },
+                    { "name": "David" }
+                ]
+            }
         }
     ]
 }
