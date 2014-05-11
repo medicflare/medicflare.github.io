@@ -1,5 +1,5 @@
-@mixin box-shadow($attr...){
-	box-shadow: 				$attr;
-	-moz-box-shadow: 		$attr;
+@mixin box-shadow($attr...) {
+  box-shadow:         $attr;
+  -moz-box-shadow:    $attr;
   -webkit-box-shadow: $attr;
 }
