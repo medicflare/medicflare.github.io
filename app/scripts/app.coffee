@@ -21,13 +21,15 @@ angular
         templateUrl: 'views/clinics/show.html'
         controller:  'ShowClinicCtrl'
 
-      # Receptionists
+      # Queues
       .when '/clinics/:clinicId/sign_up',
         templateUrl: 'views/queues/sign_up.html'
         controller:  'QueuesCtrl'
       .when '/clinics/:clinicId/confirm',
         templateUrl: 'views/queues/confirm.html'
         controller:  'QueuesCtrl'
+
+      # Receptionists
       .when '/receptionists/sign_in',
         templateUrl: 'views/receptionists/sign_in.html'
         controller: 'ReceptionistsCtrl'
