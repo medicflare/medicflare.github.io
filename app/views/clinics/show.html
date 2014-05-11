@@ -1,4 +1,13 @@
 <h1>This is the Detail Page for {{ clinic.name }}</h1>
-{{ clinic.location }}
+<p>{{ clinic.location }} </p>
 
-<a ng-href='#/clinics/{{clinic.id}}/sign_up' class='btn btn-success'>Sign Up For Queue</a>
+<h2> Total in line: {{ clinic.lineup.patients.length }}</h2>
+<h3> Line Up</h3>
+<ul class="lineup-list">
+    <li ng-repeat="patient in clinic.lineup.patients">
+        {{ patient.name }}
+    </li>
+</ul>
+
+
+<a ng-href='#/clinics/{{clinic.id}}/sign_up' class='btn btn-success'>Get in Line</a>
