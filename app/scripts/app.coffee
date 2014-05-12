@@ -18,6 +18,7 @@ angular
     full_width_layout =
       name: 'full_width'
       template: '<div ui-view></div>'
+
     $stateProvider
       .state(app_layout)
       .state(full_width_layout)
