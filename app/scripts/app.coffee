@@ -56,6 +56,9 @@ angular
         controller:  'QueuesCtrl'
 
       # Receptionists Pages
+      .state 'receptionists',
+        url: '/receptionists',
+        template: 'List of receptionists' #TODO: replace with real template later
       .state 'receptionists.sign_in',
         parent: app_layout,
         url: '/receptionists/sign_in',
