@@ -5,37 +5,64 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ui.router'
   ])
-  .config ($routeProvider) ->
-    $routeProvider
-      .when '/',
-        templateUrl: 'views/main.html'
+  .config ($stateProvider, $urlRouterProvider) ->
+    $urlRouterProvider
+      .otherwise('/')
+
+    # Layouts
+    app_layout =
+      name: 'app'
+      templateUrl: 'views/layouts/app.html'
+    full_width_layout =
+      name: 'full_width'
+      template: '<div ui-view></div>'
+    $stateProvider
+      .state(app_layout)
+      .state(full_width_layout)
+
+      # Pages
+      .state 'main',
+        parent: app_layout,
+        url: '/',
+        templateUrl: 'views/main.html',
         controller:  'MainCtrl'
+      .state 'coming_soon',
+        url: '/coming_soon'
+        template: 'Coming Soon'
 
-      # Clinics
-      .when '/clinics',
-        templateUrl: 'views/clinics/index.html'
+      # Clinic Pages
+      .state 'clinics',
+        parent: app_layout,
+        url: '/clinics',
+        templateUrl: 'views/clinics/index.html',
         controller:  'ClinicIndexCtrl'
-      .when '/clinics/:clinicId',
-        templateUrl: 'views/clinics/show.html'
+      .state 'clinic',
+        parent: app_layout,
+        url: '/clinics/:clinicId',
+        templateUrl: 'views/clinics/show.html',
         controller:  'ShowClinicCtrl'
-
-      # Queues
-      .when '/clinics/:clinicId/sign_up',
-        templateUrl: 'views/queues/sign_up.html'
+      .state 'clinic.sign_up',
+        parent: app_layout,
+        url: '/clinics/:clinicId/sign_up',
+        templateUrl: 'views/queues/sign_up.html',
         controller:  'QueuesCtrl'
-      .when '/clinics/:clinicId/confirm',
-        templateUrl: 'views/queues/confirm.html'
+      .state 'clinic.confirm',
+        parent: app_layout,
+        url: '/clinics/:clinicId/confirm',
+        templateUrl: 'views/queues/confirm.html',
         controller:  'QueuesCtrl'
 
-      # Receptionists
-      .when '/receptionists/sign_in',
-        templateUrl: 'views/receptionists/sign_in.html'
+      # Receptionists Pages
+      .state 'receptionists.sign_in',
+        parent: app_layout,
+        url: '/receptionists/sign_in',
+        templateUrl: 'views/receptionists/sign_in.html',
         controller: 'ReceptionistsCtrl'
-      .when '/receptionists/new',
-        templateUrl: 'views/receptionists/new.html'
+      .state 'receptionists.new',
+        parent: app_layout,
+        url: '/receptionists/new',
+        templateUrl: 'views/receptionists/new.html',
         controller: 'ReceptionistsCtrl'
-
-      .otherwise
-        redirectTo: '/'
+    return

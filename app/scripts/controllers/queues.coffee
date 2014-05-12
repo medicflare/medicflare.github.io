@@ -1,10 +1,10 @@
 'use strict'
 
 angular.module('medicalAppApp')
-  .controller 'QueuesCtrl', ($scope, $routeParams, $location, ClinicService, QueueService)->
+  .controller 'QueuesCtrl', ($scope, $stateParams, $location, ClinicService, QueueService)->
     ClinicService.get (data) ->
       result = data.clinics.filter (obj) ->
-        return obj.id == parseInt $routeParams.clinicId
+        return obj.id == parseInt $stateParams.clinicId
       $scope.clinic = result[0]
 
     $scope.patient = {
