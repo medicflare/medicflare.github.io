@@ -31,7 +31,7 @@ angular
         controller:  'MainCtrl'
       .state 'coming_soon',
         url: '/coming_soon'
-        template: 'Coming Soon'
+        templateUrl: 'views/coming_soon.html'
 
       # Clinic Pages
       .state 'clinics',

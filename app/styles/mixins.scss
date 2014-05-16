@@ -1,3 +1,5 @@
+$montserrat-font-family: 'Montserrat', sans-serif;
+
 @mixin box-shadow($attr...) {
   box-shadow:         $attr;
   -moz-box-shadow:    $attr;

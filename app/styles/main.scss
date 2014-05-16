@@ -93,3 +93,70 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
     border-bottom: 0;
   }
 }
+
+// BEGIN coming_soon
+#coming_soon {
+  $main-blue:          #7599B1;
+  $main-blue-shadow:   #21313E;
+  $main-orange:        #F8CD95;
+  $main-orange-shadow: #DDB785;
+  font-family:         $montserrat-font-family;
+
+  &.splash {
+    background: url("/images/splash.png") no-repeat top center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .shout-out {
+    background-color: $main-blue;
+    border-radius: 10px;
+    height: 500px;
+    opacity: 0.9;
+    padding: 10px;
+    width: 500px;
+    margin: 100px auto;
+
+    h1 {
+      text-align: center;
+      color: white;
+    }
+
+    form {
+      text-align: center;
+
+      .email_field {
+        margin: 10px 0;
+        input[type='email'] {
+          border:        none;
+          border-radius: 10px;
+          height:        40px;
+          width:         300px;
+          padding:       0 10px;
+        }
+      }
+
+      button[type='submit'] {
+        border:        none;
+        border-radius: 10px;
+        height:        40px;
+        width:         100px;
+        background-color: $main-orange;
+        border-bottom:    3px solid $main-orange-shadow;
+
+        &:hover {
+          border-bottom: none;
+          background-color: #F9E18B;
+        }
+
+      }
+
+    }
+  }
+}
+// END coming_soon
