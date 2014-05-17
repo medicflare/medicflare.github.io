@@ -116,14 +116,14 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
   .shout-out {
     background-color: $main-blue;
-    border-radius: 	10px;
-    height: 			 	450px;
-    opacity: 			 	0.9;
-    padding: 			 	10px;
-    width: 				 	500px;
-    margin: 				100px auto;
-    text-align: 		center;
-    color: 					white;
+    border-radius: 	  10px;
+    height: 		  300px;
+    opacity: 		  0.9;
+    padding: 		  10px;
+    width: 			  500px;
+    margin: 		  100px auto;
+    text-align: 	  center;
+    color: 			  white;
 
     .logo, .subtitle {
       text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
@@ -156,6 +156,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
         .email_field {
           margin: 10px 0;
+          color:  black;
           input[type='email'] {
             border:        none;
             border-radius: 10px;
@@ -165,17 +166,17 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
           }
         }
 
-        button[type='submit'] {
-          border: 					none;
-          border-radius: 		10px;
-        	height:        		40px;
-          width: 				 		100px;
+        button {
+          border: none;
+          border-radius: 10px;
+          height: 40px;
+          width: 100px;
           background-color: $main-orange;
-          border-bottom: 		3px solid $main-orange-shadow;
+          border-bottom: 3px solid $main-orange-shadow;
           color: black;
 
           &:hover {
-            border-bottom: 		none;
+            border-bottom: none;
             background-color: $main-orange-yellow;
           }
         }
