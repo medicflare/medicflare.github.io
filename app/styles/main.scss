@@ -100,6 +100,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
   $main-blue-shadow:   #21313E;
   $main-orange:        #F8CD95;
   $main-orange-shadow: #DDB785;
+  $main-orange-yellow: #F9E18B;
   font-family:         $montserrat-font-family;
 
   &.splash {
@@ -115,48 +116,72 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
   .shout-out {
     background-color: $main-blue;
-    border-radius: 10px;
-    height: 500px;
-    opacity: 0.9;
-    padding: 10px;
-    width: 500px;
-    margin: 100px auto;
+    border-radius: 	10px;
+    height: 			 	450px;
+    opacity: 			 	0.9;
+    padding: 			 	10px;
+    width: 				 	500px;
+    margin: 				100px auto;
+    text-align: 		center;
+    color: 					white;
 
-    h1 {
-      text-align: center;
-      color: white;
+    .logo, .subtitle {
+      text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
     }
 
-    form {
-      text-align: center;
+    .logo {
+      font-family: 	$oleo-script-font-family;
+      font-size: 		40px;
+      strong {
+        color: $main-orange;
+      }
+    }
 
-      .email_field {
-        margin: 10px 0;
-        input[type='email'] {
-          border:        none;
-          border-radius: 10px;
-          height:        40px;
-          width:         300px;
-          padding:       0 10px;
+    p.subtitle {
+      font-family: 	$open-sans-font-family;
+      font-size: 		15px;
+      font-style: 	italic;
+    }
+
+    p.intro {
+      padding: 			0 10px;
+      line-height: 	1.8;
+      margin-top: 	50px;
+    }
+
+    .mailing_list_form {
+      margin-top: 50px;
+
+      form {
+
+        .email_field {
+          margin: 10px 0;
+          input[type='email'] {
+            border:        none;
+            border-radius: 10px;
+          	height:        40px;
+          	width:         300px;
+          	padding:       0 10px;
+          }
+        }
+
+        button[type='submit'] {
+          border: 					none;
+          border-radius: 		10px;
+        	height:        		40px;
+          width: 				 		100px;
+          background-color: $main-orange;
+          border-bottom: 		3px solid $main-orange-shadow;
+          color: black;
+
+          &:hover {
+            border-bottom: 		none;
+            background-color: $main-orange-yellow;
+          }
         }
       }
-
-      button[type='submit'] {
-        border:        none;
-        border-radius: 10px;
-        height:        40px;
-        width:         100px;
-        background-color: $main-orange;
-        border-bottom:    3px solid $main-orange-shadow;
-
-        &:hover {
-          border-bottom: none;
-          background-color: #F9E18B;
-        }
-
-      }
-
     }
   }
 }
+
 // END coming_soon
