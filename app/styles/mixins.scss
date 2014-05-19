@@ -1,6 +1,21 @@
-$montserrat-font-family: 'Montserrat', sans-serif;
-$oleo-script-font-family: 'Oleo Script', Helvetica, sans-serif;
-$open-sans-font-family: 'Open Sans', sans-serif;
+@font-face {
+  font-family: "Montserrat";
+  src: url('/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Oleo Script";
+  src: url('/fonts/Oleo_Script/OleoScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('/fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+
+$montserrat-font-family: "Montserrat", sans-serif;
+$oleo-script-font-family: "Oleo Script", Helvetica, sans-serif;
+$open-sans-font-family: "Open Sans", sans-serif;
 
 @mixin box-shadow($attr...) {
   box-shadow:         $attr;
