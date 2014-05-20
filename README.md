@@ -1,2 +1,2 @@
-medical_app
+MedicFlare Github Page
 ===========
